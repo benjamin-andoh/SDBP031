@@ -30,7 +30,7 @@ public class ChatController : ControllerBase
         }
         catch (OperationCanceledException)
         {
-            throw; // let the framework handle cancellations
+            throw; // Let the framework handle cancellation
         }
         catch (Exception ex)
         {
