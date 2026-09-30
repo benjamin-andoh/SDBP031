@@ -1,0 +1,23 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+	<TargetFramework>net10.0</TargetFramework>
+	<RuntimeIdentifiers>win-x64</RuntimeIdentifiers>
+	<Nullable>enable</Nullable>
+	<ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+	<ItemGroup>
+	<!-- Include only the contract sources that don't depend on external packages in this environment -->
+	<Compile Include="..\Contracts\ChatCompletionModels.cs" Link="Contracts\ChatCompletionModels.cs" />
+	<Compile Include="..\Contracts\IChatCompletionService.cs" Link="Contracts\IChatCompletionService.cs" />
+	<Compile Include="..\Contracts\FakeChatCompletionService.cs" Link="Contracts\FakeChatCompletionService.cs" />
+	<Compile Include="..\Contracts\FoundryLocalChatCompletionService.cs" Link="Contracts\FoundryLocalChatCompletionService.cs" />
+  </ItemGroup>
+
+	<ItemGroup>
+	  <PackageReference Include="Microsoft.AI.Foundry.Local" Version="2.1.0" />
+	  <PackageReference Include="Microsoft.Extensions.AI.OpenAI" Version="10.10.1" />
+	</ItemGroup>
+
+</Project>
