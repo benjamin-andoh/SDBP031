@@ -45,5 +45,16 @@ public class ChatController : ControllerBase
             return Ok(new { status = "ready" });
 
         return StatusCode(503, new { status = "starting" });
+
+
+    }
+
+        [HttpGet("/")]
+    public IActionResult Homepage()
+    {
+        if (_service.IsReady)
+            return Ok(new { status = "Welcome to the Chat API, Please note this is a simple implementation." });
+
+        return StatusCode(503, new { status = "starting" });
     }
 }
