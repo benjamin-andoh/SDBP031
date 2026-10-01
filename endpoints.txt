@@ -1,0 +1,5 @@
+2 working endpoints
+
+https://humber-app-service-exbua8cwdqarbpav.centralus-01.azurewebsites.net/
+
+https://humber-app-service-exbua8cwdqarbpav.centralus-01.azurewebsites.net/health
